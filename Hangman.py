@@ -31,6 +31,7 @@ while k:
     while int(lygis) <= 2 or int(lygis) >= len(max_lenght) + 1:
         lygis = int(input("Pasirinkite Lygį (3-" + str(len(max_lenght)) + "): "))
 
+    # Išveda visus rastus elementus pvz.:7
     sk2 = str(len(picture.HANGMANPICS))
     # print(sk2)
 
