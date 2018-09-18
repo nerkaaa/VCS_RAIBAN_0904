@@ -64,7 +64,8 @@ while k:
     # zodis = list(zodziu_sarasas[0])
     # ['a', 'd', 'm', 'i', 'n', 'i', 's', 't', 'r', 'a', 't', 'i', 'o', 'n'] 14
 
-    print(zodis, len(zodis), "\n")
+    # Atsakymas
+    # print(zodis, len(zodis), "\n")
 
     linijos = []
     linijos.extend(zodis)
