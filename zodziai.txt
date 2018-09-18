@@ -992,6 +992,7 @@ yard
 yeah
 year
 yes
+yellow
 yet
 you
 young
