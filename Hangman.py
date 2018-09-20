@@ -67,7 +67,7 @@ while k:
 
     # Atsakymas
     print("Raides:", len(zodis))
-    # print(zodis, len(zodis), "\n")
+    print(zodis, len(zodis), "\n")
 
     linijos = []
     linijos.extend(zodis)
@@ -153,6 +153,10 @@ while k:
             print("\nTeisingos raidės:", atspetu_raidziu_sarasas)
             print("\nKlaidingos raidės:", spetu_zodziu_sarasas)
             print("\nPadarėte visas", klaidu_skaicius, "galimas klaidas! Deja, žaidimas baigtas... :(")
+            break
+
+        if spejimas == zodis:
+            print("\nSveikiname su pergale. Ar bandysite dar karta?")
             break
 
         if "-" not in linijos:  # Linas
