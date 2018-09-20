@@ -67,7 +67,7 @@ while k:
 
     # Atsakymas
     print("Raides:", len(zodis))
-    print(zodis, len(zodis), "\n")
+    # print(zodis, len(zodis), "\n")
 
     linijos = []
     linijos.extend(zodis)
