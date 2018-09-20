@@ -22,14 +22,14 @@ while k:
     # Start --> Error handling
     while True:
         try:
-            lygis = int(input("Pasirinkite Lygį (3-" + str(len(max_lenght)) + "): "))
+            lygis = int(input("Pasirinkite Lygi (3-" + str(len(max_lenght)) + "): "))
             break
         except ValueError:
-            print("Įveskite skaičių!")
+            print("Iveskite skaiciu!")
     # End --> Error handling
 
     while int(lygis) <= 2 or int(lygis) >= len(max_lenght) + 1:
-        lygis = int(input("Pasirinkite Lygį (3-" + str(len(max_lenght)) + "): "))
+        lygis = int(input("Pasirinkite Lygi (3-" + str(len(max_lenght)) + "): "))
 
     # Išveda visus rastus elementus pvz.:7
     sk2 = str(len(picture.HANGMANPICS))
@@ -38,14 +38,14 @@ while k:
     # Start --> Error handling
     while True:
         try:
-            klaidu_skaicius = int(input("Pasirinkite kiek galėsite padaryti klaidų (2-" + sk2 + "): "))
+            klaidu_skaicius = int(input("Pasirinkite kiek galesite padaryti klaidu (2-" + sk2 + "): "))
             break
         except ValueError:
-            print("Įveskite skaičių!")
+            print("Iveskite skaiciu!")
     # End --> Error handling
 
     while int(klaidu_skaicius) <= 1 or int(klaidu_skaicius) >= int(sk2) + 1:
-        klaidu_skaicius = int(input("Pasirinkite kiek galėsite padaryti klaidų (2-" + sk2 + "): "))
+        klaidu_skaicius = int(input("Pasirinkite kiek galesite padaryti klaidu (2-" + sk2 + "): "))
 
     # print(len(picture.HANGMANPICS))
     sk = len(picture.HANGMANPICS) - klaidu_skaicius
@@ -66,8 +66,8 @@ while k:
     # ['a', 'd', 'm', 'i', 'n', 'i', 's', 't', 'r', 'a', 't', 'i', 'o', 'n'] 14
 
     # Atsakymas
-    print("Raides:", len(zodis))
-    # print(zodis, len(zodis), "\n")
+    # print("Raides:", len(zodis))
+    print(zodis, len(zodis), "\n")
 
     linijos = []
     linijos.extend(zodis)
@@ -78,7 +78,7 @@ while k:
     for i in range(len(linijos)):
         linijos[i] = "-"
 
-    print("Atspėkite žodį: ")
+    print("Atspekite zodi: ")
     print(' '.join(linijos))
     print("\n")
 
@@ -92,15 +92,15 @@ while k:
         # Start --> Error handling
         while True:
             try:
-                spejimas = str(input("Įrašykite raidę: "))
+                spejimas = str(input("Irasykite raide: "))
                 if spejimas.isalpha():
                     break
             except ValueError:
-                print("Ups..galimos tik raidės!")
+                print("Ups..galimos tik raides!")
         # End --> Error handling
 
         if spejimas == "stop":
-            pasirinkimas = input("Ar norite tęsti žaidimą ( y / n )?\n")
+            pasirinkimas = input("Ar norite testi zaidima ( y / n )?\n")
             if pasirinkimas == "n":
                 print("Iki greito...")
                 break
@@ -121,7 +121,7 @@ while k:
                 if e[0] == spejimas and e[1] > 1:
                     print(picture.HANGMANPICS[sk])
                     klaidos += 1
-                    print("Raidė jau spėta!. Iš viso klaidų:", klaidos)
+                    print("Raide jau speta!. Is viso klaidu:", klaidos)
                     sk += 1
 
         if spejimas not in zodis:  # Linas
@@ -131,7 +131,7 @@ while k:
             counter = collections.Counter(spetu_zodziu_sarasas)
             for a in counter.items():
                 if a[0] == spejimas and a[1] == 2:
-                    print("Papildomas spėjimas")
+                    print("Papildomas spejimas")
                     # print("Spėtų žodžių sąrašas:", spetu_zodziu_sarasas)
                     # print("Padarėte klaidą. Viso:", klaidos)
                     # print("Zodziu skaciavimas: ", counter)
@@ -140,19 +140,19 @@ while k:
                 if a[0] == spejimas and a[1] == 1:
                     print(picture.HANGMANPICS[sk])
                     klaidos += 1
-                    print("Padarėte klaidą. Viso klaidų:", klaidos)
+                    print("Padarete klaida. Viso klaidu:", klaidos)
                     sk += 1
 
                 if a[0] == spejimas and a[1] > 2:
                     print(picture.HANGMANPICS[sk])
                     klaidos += 1
-                    print("Raidė jau spėta!. Iš viso klaidų:", klaidos)
+                    print("Raide jau speta!. Is viso klaidu:", klaidos)
                     sk += 1
 
         if klaidu_skaicius == klaidos:
-            print("\nTeisingos raidės:", atspetu_raidziu_sarasas)
-            print("\nKlaidingos raidės:", spetu_zodziu_sarasas)
-            print("\nPadarėte visas", klaidu_skaicius, "galimas klaidas! Deja, žaidimas baigtas... :(")
+            print("\nTeisingos raides:", atspetu_raidziu_sarasas)
+            print("\nKlaidingos raides:", spetu_zodziu_sarasas)
+            print("\nPadarete visas", klaidu_skaicius, "galimas klaidas! Deja, zaidimas baigtas... :(")
             break
 
         if spejimas == zodis:
@@ -166,9 +166,9 @@ while k:
         x += 1
         s -= 1
 
-    ats = input("\nAr norite žaisti iš naujo ( y / n )?\n")
+    ats = input("\nAr norite zaisti is naujo ( y / n )?\n")
     if ats == "y":
         k = True
     else:
-        print("Ačiū, kad žaidėte... :)")
+        print("Aciu, kad zaidete... :)")
         k = False
